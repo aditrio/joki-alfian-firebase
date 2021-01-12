@@ -68,7 +68,7 @@ function fetchData(data,index){
 
 	}else {
 
-		var html = "<tr>"
+		        var html = "<tr>"
                     +"<td scope='row'>"+index+"</td>"
                     +"<td>"+data['nama']+"</td>"
                     +"<td>"+data['nim']+"</td>"
@@ -78,6 +78,13 @@ function fetchData(data,index){
                     	+"<button class='btn btn-sm btn-info' data-toggle='modal' onclick='getData(\""+data['id']+"\")' data-target='#editModal'>Edit</button>"
                     	+"<button class='btn btn-sm btn-danger ml-1 btn-delete' onclick='deleteData(\""+data['id']+"\")' >Hapus</button>"
                     +'</td>'
+               +"</tr>";
+
+               var dash = "<tr>"
+               +"<td scope='row'>"+index+"</td>"
+               +"<td>"+data['nama']+"</td>"
+               +"<td>"+data['nim']+"</td>"
+               +"<td>"+data['nilai']+"</td>"
                +"</tr>";
         
                var nilai = "<tr>"
@@ -89,10 +96,11 @@ function fetchData(data,index){
                +"<td>"
                    +"<button class='btn btn-sm btn-warning' data-toggle='modal' onclick='getInput(\""+data['id']+"\")' data-target='#inputModal'>Input / Edit nilai</button>"
                +'</td>'
-          +"</tr>";
+                +"</tr>";
 
             $('#list-mahasiswa').append(html);
             $('#list-nilai').append(nilai);
+            $('#list-dashboard').append(dash);
 
     }
     
